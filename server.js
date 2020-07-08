@@ -1,33 +1,24 @@
-// Criando o servidor
-
 const express = require('express')
 const nunjucks = require('nunjucks')
-const routes = require("./routes")
+const routes = require('./routes')
 
 const server = express()
 
-// Fim criando o servidor 
-
-// indicando para utilizar os arquivos na pasta public
-server.use(express.static('public'))
-
-// indicando para utilizar o arq routes
+server.use(express.urlencoded({ extended: true})) // linha responsável por fazer o express entender o que vem dentro do req.body
+server.use(express.static('public')) 
 server.use(routes)
 
-// configuração da view engine
-server.set("view engine", "njk")
+server.set('view engine', 'njk') 
 
-nunjucks.configure("views", {
-    express: server,
-    autoescape: false,
-    noCache: true
-})
-// fim configuração view engine
+nunjucks.configure('views', {
+express: server,
+  noCache: true
+}) 
 
-//informa a porta que o servidor fica ouvindo e o coloca online
 
-server.listen(5050, function(){
-    console.log("Server is running")
+server.listen(3333, function() {
+  console.log('servidor em testes')
 })
 
-
+//instalando o Browsersync e npm-run-install
+// $npm install browser-sync npm-run-all -D   

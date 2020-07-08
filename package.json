@@ -1,20 +1,24 @@
 {
-  "name": "modulo4",
+  "name": "desafio",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
+  "main": "script.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5050 --files 'public,views'"
+    "browsersync": "browser-sync start --proxy http://localhost:3333 --files 'public, views'"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "method-override": "^3.0.0",
+    "intl": "^1.2.5",
     "nunjucks": "^3.2.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5"
   }
 }

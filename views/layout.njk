@@ -1,24 +1,20 @@
-{# em associação ao ruby este layout seria o navbar  #}
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        
+        <link rel="stylesheet" href="/style.css">
         {% block head %}
-            <title>Gym Manager</title>
+            <title>School Manager</title>
         {% endblock %}
-
-        <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
         <header>
             <div class="links">
-                <a href="/" class="active">Instructors</a>
-                <a href="/"> Member</a>
+                <a href="/" class='active'>Teachers</a>
+                <a href="/students">Students</a>
             </div>
         </header>
-
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock  content%}
 
     </body>
-
-</html>
+</html>    
